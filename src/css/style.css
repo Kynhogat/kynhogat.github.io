@@ -14,20 +14,36 @@ html{
     box-sizing: border-box;
     transition: var(--transition);
 }
+/* From https://css.glass */
+.nav-link{
+    color: white;
+}
 .nav{
-    box-shadow: 2px 3px 2px #f1f1f1;
-    background-color: red;
+    color: white ;
     position: sticky;
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
     top: 0;
     left: 0;
     z-index: 3;
+    /*test*/
 }
 .nav .logo{
+    padding-top: 2rem;
+    padding-bottom: 0;
     float: left;
 
 }
+.nav .logo a{
+    color: white;
+}
 .nav-2{
+    font-size: 2rem;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
     overflow: hidden;
     float: right;
     padding: 2rem 1.5rem;
@@ -43,6 +59,7 @@ html{
     list-style-type: none;
 }
 .logo {
+    padding-top: 1%;
     font-size: 2rem;
     font-weight: 500;
   }
@@ -53,7 +70,7 @@ html{
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color: var(--black-color);
+    background-color: rgb(76, 130, 211);
     transform-origin: bottom right;
     transition: transform 0.25s ease-out;
     transform: scaleX(0);
@@ -62,3 +79,18 @@ html{
     transform: scaleX(1);
     transform-origin: bottom left;
   }
+  #vid-background {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+  }
+
+@media (max-width: 750px) {
+    #vid-background { display: none; }
+}
