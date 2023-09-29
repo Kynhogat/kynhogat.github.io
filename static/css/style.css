@@ -202,11 +202,14 @@ html {
 	}
 }
 
-/**About**/
 
 
-/*About section*/
 
+/**********************About section*******************/
+
+li{
+	list-style: none;
+}
 
 /* Composition */
 .team {
