@@ -1,345 +1,306 @@
 :root {
-	--primary-color: #0652dd;
-	--secondary-color: #ea2027;
-	--black-color: #000000;
-	--transition: 0.4s ease-in;
+--primary-color:#0652dd;
+--secondary-color:#ea2027;
+--black-color:#000;
+--transition:.4s ease-in
 }
 
 html {
-	scroll-behavior: smooth;
-	overflow-x: hidden;
+scroll-behavior:smooth;
+overflow-x:hidden
 }
 
 * {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-	transition: var(--transition);
+margin:0;
+padding:0;
+box-sizing:border-box;
+transition:var(--transition)
 }
 
-
-
-/* From https://css.glass */
 .nav-link {
-	color: white;
+color:#fff
 }
 
 .nav {
-	color: white;
-	position: fixed;
-	background: rgba(0, 0, 0, 0.2);
-	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-	backdrop-filter: blur(5px);
-	-webkit-backdrop-filter: blur(5px);
-	width: 100%;
-	top: 0;
-	left: 0;
-	z-index: 100000;
-    /*test*/
-	;
+color:#fff;
+position:fixed;
+background:rgba(0,0,0,0.2);
+box-shadow:0 4px 30px rgba(0,0,0,0.1);
+backdrop-filter:blur(5px);
+-webkit-backdrop-filter:blur(5px);
+width:100%;
+top:0;
+left:0;
+z-index:100000
 }
 
 .nav .logo {
-	padding-top: 2rem;
-	padding-bottom: 0;
-	float: left;
+padding-top:2rem;
+padding-bottom:0;
+float:left
 }
 
 .nav .logo a {
-	color: white;
+color:#fff
 }
 
 .nav-2 {
-	font-size: 2rem;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	overflow: hidden;
-	float: right;
-	padding: 2rem 1.5rem;
+font-size:2rem;
+display:flex;
+justify-content:space-between;
+align-items:center;
+overflow:hidden;
+float:right;
+padding:2rem 1.5rem
 }
 
 .hamburger {
-	display: none;
+display:none
 }
 
 .nav-2 .nav-item {
-	margin-left: 2rem;
-	list-style-type: none;
+margin-left:2rem;
+list-style-type:none
 }
 
 .logo {
-	padding-top: 1%;
-	font-size: 2rem;
-	font-weight: 500;
+padding-top:1%;
+font-size:2rem;
+font-weight:500
 }
 
 .nav-link::after {
-	content: '';
-	position: absolute;
-	width: 100%;
-	height: 2px;
-	bottom: 0;
-	left: 0;
-	background-color: rgb(76, 130, 211);
-	transform-origin: bottom right;
-	transition: transform 0.25s ease-out;
-	transform: scaleX(0);
+content:'';
+position:absolute;
+width:100%;
+height:2px;
+bottom:0;
+left:0;
+background-color:#4c82d3;
+transform-origin:bottom right;
+transition:transform .25s ease-out;
+transform:scaleX(0)
 }
 
 .nav-link:hover::after {
-	transform: scaleX(1);
-	transform-origin: bottom left;
+transform:scaleX(1);
+transform-origin:bottom left
 }
 
 #vid-background {
-	width: 100vw;
-	height: 100vh;
-	object-fit: cover;
-	position: absolute;
-	left: 0;
-	right: 0;
-	top: 0;
-	bottom: 0;
-	z-index: -1;
+width:100vw;
+height:100vh;
+object-fit:cover;
+position:absolute;
+left:0;
+right:0;
+top:0;
+bottom:0;
+z-index:-1
 }
 
 @media (max-width: 750px) {
-	#vid-background {
-		display: none;
-	}
+#vid-background {
+display:none
+}
 }
 
 .header {
-	margin-top: 20rem;
-	color: black;
+margin-top:20rem;
+color:#000
 }
 
 .hero-header {
-  /* From https://css.glass */
-	width: 700px;
-	height: 300px;
-	padding: 4rem;
-	background: rgba(255, 254, 254, 0.81);
-	border-radius: 16px;
-	-webkit-box-shadow: 0px 0px 34px 0px rgba(0,0,0,0.75);
-	-moz-box-shadow: 0px 0px 34px 0px rgba(0,0,0,0.75);
-	box-shadow: 0px 0px 34px 0px rgba(0,0,0,0.75);
-	backdrop-filter: blur(2.5px);
-	-webkit-backdrop-filter: blur(2.5px);
-	border: 1px solid rgba(255, 254, 254, 0.62);
+width:700px;
+height:300px;
+padding:4rem;
+background:rgba(255,254,254,0.81);
+border-radius:16px;
+-webkit-box-shadow:0 0 34px 0 rgba(0,0,0,0.75);
+-moz-box-shadow:0 0 34px 0 rgba(0,0,0,0.75);
+box-shadow:0 0 34px 0 rgba(0,0,0,0.75);
+backdrop-filter:blur(2.5px);
+-webkit-backdrop-filter:blur(2.5px);
+border:1px solid rgba(255,254,254,0.62)
 }
 
 .container-hero {
-	position: absolute;
-	width: 24px;
-	height: 24px;
-	padding-left: 48%;
-	bottom: 100px;
+position:absolute;
+width:24px;
+height:24px;
+padding-left:48%;
+bottom:100px
 }
 
 .chevron {
-	position: absolute;
-	width: 28px;
-	height: 8px;
-	opacity: 0;
-	transform: scale3d(0.5, 0.5, 0.5);
-	animation: move 3s ease-out infinite;
+position:absolute;
+width:28px;
+height:8px;
+opacity:0;
+transform:scale3d(0.5,0.5,0.5);
+animation:move 3s ease-out infinite
 }
 
 .chevron:first-child {
-	animation: move 3s ease-out 1s infinite;
+animation:move 3s ease-out 1s infinite
 }
 
 .chevron:nth-child(2) {
-	animation: move 3s ease-out 2s infinite;
+animation:move 3s ease-out 2s infinite
 }
 
-.chevron:before,
-.chevron:after {
-	content: ' ';
-	position: absolute;
-	top: 0;
-	height: 100%;
-	width: 51%;
-	background: #fff;
+.chevron:before,.chevron:after {
+content:' ';
+position:absolute;
+top:0;
+height:100%;
+width:51%;
+background:#fff
 }
 
 .chevron:before {
-	left: 0;
-	transform: skew(0deg, 30deg);
+left:0;
+transform:skew(0deg,30deg)
 }
 
 .chevron:after {
-	right: 0;
-	width: 50%;
-	transform: skew(0deg, -30deg);
+right:0;
+width:50%;
+transform:skew(0deg,-30deg)
 }
 
 @keyframes move {
-	25% {
-		opacity: 1;
-	}
+25% {
+opacity:1
+}
 
-	33% {
-		opacity: 1;
-		transform: translateY(30px);
-	}
+33% {
+opacity:1;
+transform:translateY(30px)
+}
 
-	67% {
-		opacity: 1;
-		transform: translateY(40px);
-	}
+67% {
+opacity:1;
+transform:translateY(40px)
+}
 
-	100% {
-		opacity: 0;
-		transform: translateY(55px) scale3d(0.5, 0.5, 0.5);
-	}
+100% {
+opacity:0;
+transform:translateY(55px) scale3d(0.5,0.5,0.5)
+}
 }
 
 @keyframes pulse {
-	to {
-		opacity: 1;
-	}
+to {
+opacity:1
+}
 }
 
-
-
-
-/**********************About section*******************/
-
-li{
-	list-style: none;
+li {
+list-style:none
 }
 
-/* Composition */
 .team {
-	--flow-space: 2em;
+--flow-space:2em
 }
 
-/* Blocks */
 .profile {
-	display: flex;
-	flex-direction: column;
-	justify-content: flex-end;
-	aspect-ratio: 1/1;
-	position: relative;
-	padding: 1.5rem;
-	color: #ffffff;
-	backface-visibility: hidden;
-	text-decoration: none;
-	overflow: hidden;
+display:flex;
+flex-direction:column;
+justify-content:flex-end;
+aspect-ratio:1/1;
+position:relative;
+padding:1.5rem;
+color:#fff;
+backface-visibility:hidden;
+text-decoration:none;
+overflow:hidden
 }
 
-.profile::before,
-.profile::after {
-	content: "";
-	width: 100%;
-	height: 100%;
-	position: absolute;
-  /*inset: 0;*/
-	top: 0;
-	left: 0;
+.profile::before,.profile::after {
+content:"";
+width:100%;
+height:100%;
+position:absolute;
+top:0;
+left:0
 }
 
 .profile::before {
-	background: linear-gradient(
-    to top,
-    hsl(0 0% 0% / 0.79) 0%,
-    hsl(0 0% 0% / 0.787) 7.8%,
-    hsl(0 0% 0% / 0.779) 14.4%,
-    hsl(0 0% 0% / 0.765) 20.2%,
-    hsl(0 0% 0% / 0.744) 25.3%,
-    hsl(0 0% 0% / 0.717) 29.9%,
-    hsl(0 0% 0% / 0.683) 34.3%,
-    hsl(0 0% 0% / 0.641) 38.7%,
-    hsl(0 0% 0% / 0.592) 43.3%,
-    hsl(0 0% 0% / 0.534) 48.4%,
-    hsl(0 0% 0% / 0.468) 54.1%,
-    hsl(0 0% 0% / 0.393) 60.6%,
-    hsl(0 0% 0% / 0.31) 68.3%,
-    hsl(0 0% 0% / 0.216) 77.3%,
-    hsl(0 0% 0% / 0.113) 87.7%,
-    hsl(0 0% 0% / 0) 100%
-  );
-	transition: 300ms opacity linear;
+background:linear-gradient(to top,hsl(0 0% 0% / 0.79) 0%,hsl(0 0% 0% / 0.787) 7.8%,hsl(0 0% 0% / 0.779) 14.4%,hsl(0 0% 0% / 0.765) 20.2%,hsl(0 0% 0% / 0.744) 25.3%,hsl(0 0% 0% / 0.717) 29.9%,hsl(0 0% 0% / 0.683) 34.3%,hsl(0 0% 0% / 0.641) 38.7%,hsl(0 0% 0% / 0.592) 43.3%,hsl(0 0% 0% / 0.534) 48.4%,hsl(0 0% 0% / 0.468) 54.1%,hsl(0 0% 0% / 0.393) 60.6%,hsl(0 0% 0% / 0.31) 68.3%,hsl(0 0% 0% / 0.216) 77.3%,hsl(0 0% 0% / 0.113) 87.7%,hsl(0 0% 0% / 0) 100%);
+transition:300ms opacity linear
 }
 
 .profile::after {
-	background: linear-gradient(
-    45deg,
-    hsl(5 97% 63% / 0.7) 0,
-    hsl(5 97% 63% / 0) 100%
-  );
-	opacity: 0;
-	transition: 300ms opacity linear;
+background:linear-gradient(45deg,hsl(5 97% 63% / 0.7) 0,hsl(5 97% 63% / 0) 100%);
+opacity:0;
+transition:300ms opacity linear
 }
 
 .profile > * {
-	z-index: 1;
+z-index:1
 }
 
 .profile img {
-	width: 100%;
-	height: 100%;
-	position: absolute;
-	top: 0;
-	left: 0;
-	margin: 0;
-	z-index: -1;
-	object-fit: cover;
-	filter: grayscale(1);
-	transition: filter 200ms ease, transform 250ms linear;
+width:100%;
+height:100%;
+position:absolute;
+top:0;
+left:0;
+margin:0;
+z-index:-1;
+object-fit:cover;
+filter:grayscale(1);
+transition:filter 200ms ease,transform 250ms linear
 }
 
-.profile h2,
-.profile p {
-	transform: translateY(2ex);
+.profile h2,.profile p {
+transform:translateY(2ex)
 }
 
 .profile h2 {
-	font-size: 1.7rem;
-	line-height: 1.2;
-	font-weight: 900;
-	letter-spacing: 0.03ch;
-	transition: 300ms transform ease;
+font-size:1.7rem;
+line-height:1.2;
+font-weight:900;
+letter-spacing:.03ch;
+transition:300ms transform ease
 }
 
 .profile p {
-	font-size: 1.2rem;
-	font-weight: 500;
-}
-
-.profile p {
-	opacity: 0;
-	transition: 300ms opacity linear, 300ms transform ease-in-out;
+font-size:1.2rem;
+font-weight:500;
+opacity:0;
+transition:300ms opacity linear,300ms transform ease-in-out
 }
 
 .profile:focus {
-	outline: 0.5rem solid white;
-	outline-offset: -0.5rem;
+outline:.5rem solid #fff;
+outline-offset:-.5rem
 }
 
-.profile:hover :is(h2, p),
-.profile:focus :is(h2, p) {
-	transform: none;
+.profile:hover :is(h2,p),.profile:focus :is(h2,p) {
+transform:none
 }
 
-.profile:hover::after,
-.profile:focus::after,
-.profile:hover::before,
-.profile:focus::before {
-	opacity: 0.7;
+.profile:hover::after,.profile:focus::after,.profile:hover::before,.profile:focus::before {
+opacity:.7
 }
 
-.profile:hover p,
-.profile:focus p {
-	opacity: 1;
-	transition-delay: 200ms;
+.profile:hover p,.profile:focus p {
+opacity:1;
+transition-delay:200ms
 }
 
-.profile:hover img,
-.profile:focus img {
-	filter: grayscale(0);
-	transform: scale(1.05) rotate(1deg);
+.profile:hover img,.profile:focus img {
+filter:grayscale(0);
+transform:scale(1.05) rotate(1deg)
+}
+
+.about {
+padding-top:12rem
+}
+
+.footer {
+background-color:#0652dd;
+padding-top:3rem
 }
