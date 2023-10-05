@@ -293,14 +293,14 @@ transition-delay:200ms
 
 .profile:hover img,.profile:focus img {
 filter:grayscale(0);
-transform:scale(1.05) rotate(1deg)
+transform:scale(1.05) rotate(1deg);
 }
 
 .about {
-padding-top:12rem
+padding-top:12rem;
 }
 
 .footer {
 background-color:#0652dd;
-padding-top:3rem
+padding-top:3rem;
 }
