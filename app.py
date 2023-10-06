@@ -11,6 +11,10 @@ def home():
 @app.route('/samplepage')
 def sample():
     return render_template('samplepage.html')
+# Define a route for a sample page
+@app.route('/docs')
+def docs():
+    return render_template('docs.html')
 
 @app.route('/api/data', methods=['POST'])
 def get_data():

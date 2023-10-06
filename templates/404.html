@@ -10,1051 +10,226 @@
   <link rel="stylesheet" href="../static/css/font-awesome-4.7.0/css/font-awesome.css" />
   <link rel="stylesheet" href="../static/css/style.css" !important /> 
   <style>
-    html{
+@import url("https://fonts.googleapis.com/css?family=Fira+Sans");
+.left-section .inner-content {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+* {
     box-sizing: border-box;
-
-    --black :#1a1c20 ;
-    --white : #fff ;
-    --green : #00c380 ;
-    --d-green : #019b66 ;
-    --gray : #c1c1c1 ;
-    --l-gray: #c4c4c4 ;
-    --m-gray : #373838 ;
-    --d-gray : #282724 ;
-    --d-blue: #202428 ;
-    --orange : #ef6206 ; 
-    --yellow : #dfa500 ;
-    --l-yellow: #deb953;
-    --light: #fbfbfb ;
-    --n-road : -4em;
-    --p-road : 7em;
-
-    background-color: var(--green) ;
-
-
 }
-
-html *,
-html *::before,
-html *::after{
-
-    box-sizing: inherit ;
-
+html, body {
+    margin: 0;
+    padding: 0;
 }
-
-body::before,
-body::after {
-
-    content: " " ;
-    position: absolute ;
-
+body {
+    font-family: "Fira Sans", sans-serif;
+    color: #f5f6fa;
 }
-
-body{
-
-    margin: 0 ;
-    height: 100vh ;
-    display: flex ;
-    overflow: hidden ;
-    position: relative ;
-    align-items: center ;
-    justify-content: center ;
-    background-repeat: no-repeat ;
-    animation: car 3.5s cubic-bezier(0.57, 0.63, 0.49, 0.65) infinite ;
-
-
-    background-image : 
-
-
-    /* ===rubber-l */ 
-
-        radial-gradient(circle at 49% 117%, var(--black) 37%, transparent 38%) ,
-        radial-gradient(circle at -24% 50%, var(--white) 31%, transparent 49%) ,
-        radial-gradient(2.95em 2.5em at 52% 1.2%, var(--black) 37%, transparent 38%) ,
-        radial-gradient(2.95em 2.5em at 52% 1.2%, var(--black) 37%, transparent 38%) ,
-        linear-gradient(var(--black) 100%, transparent 0) ,
-
-    /* rubber-l=== */ 
-
-    
-    /* ===rubber-r */ 
-
-        radial-gradient(circle at 49% 117%, var(--black) 37%, transparent 38%) ,
-        radial-gradient(circle at 124% 50%, var(--white) 31%, transparent 49%) ,
-        radial-gradient(2.95em 2.5em at 48% 1.2%, var(--black) 37%, transparent 38%) ,
-        radial-gradient(2.95em 2.5em at 48% 1.2%, var(--black) 37%, transparent 38%) ,
-        linear-gradient(var(--black) 100%, transparent 0) ,
-
-    /* rubber-r=== */ 
-
-
-    /* ===shadow */ 
-
-        linear-gradient( var(--d-green) 100% , transparent 0) ;
-
-    /* shadow=== */
-
-
-    background-size : 
-
-
-    /* ===rubber-l */ 
-
-        2.5em 2.5em ,
-        0.7em 0.6em ,
-        2.5em .9em ,
-        2.5em .9em ,
-        1.95em 3.9em ,
-
-    /* rubber-l=== */
-
-
-    /* ===rubber-r */ 
-
-        2.5em 2.5em ,
-        0.7em 0.6em ,
-        2.5em .9em ,
-        2.5em .9em ,
-        1.95em 3.9em ,
-
-    /* rubber-r=== */ 
-
-
-    /* ===shadow */ 
-
-        13em .9em ;
-
-    /* shadow=== */
-
-   
-    background-position : 
-
-
-    /* ===rubber-l */ 
-
-        calc(50% - 6.4em) calc(50% - 1.7em) ,
-        calc(50% - 5.26em) calc(50% - -3.4em) ,
-        calc(50% - 6.5em) calc(50% - -3.8em) ,
-        calc(50% - 4.3em) calc(50% - -3.2em) ,
-        calc(50% - 6.58em) calc(50% - -1.5em) ,
-
-    /* rubber-l=== */ 
-
-    
-    /* ===rubber-r */ 
-
-        calc(50% - -6.45em) calc(50% - 1.7em) ,
-        calc(50% - -5.26em) calc(50% - -3.4em) ,
-        calc(50% - -6.5em) calc(50% - -3.8em) ,
-        calc(50% - -4.3em) calc(50% - -3.2em) ,
-        calc(50% - -6.58em) calc(50% - -1.5em) ,
-
-    /* rubber-r=== */ 
-
-
-    /* ===shadow */ 
-
-        center calc(50% - -3.8em) ;
-
-    /* shadow=== */
-
-
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#0C0E10, #446182);
 }
-
-
-
-body::before{
-    
-    width: 15.5em ;
-    height: 62.9em ;
-    top: calc(50% - 26.2em) ;
-    background-size: 24.6% 491% ;
-    background-repeat: no-repeat ;
-    background-position: center 0 ;
-    animation: line 1.5s infinite linear, move-road 3.5s infinite linear ;
-    transform: perspective(311px) rotateX(83deg) translate3d(var(--n-road) ,-11.975em, 0) ;
-    background-image: repeating-linear-gradient(to top, var(--white) , var(--white) 4.6%, transparent 0 , transparent 13.01%) ;
-
+.background .ground {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 25vh;
+    background: #0C0E10;
 }
-
-
-
-
-
-body::after{
-
-    width: 15.2em ;
-    height: 13.2em ;
-    top: calc(50% - 8.8em) ;
-    left: calc(50% - 7.55em) ;
-    background-repeat: no-repeat ;
-    animation: light 1s linear infinite,  shake 3.5s linear infinite ;  
-    
-
-
-    background-image : 
-
-    /* ===ceiling */ 
-
-        radial-gradient(58em 20em at 50% 215% , transparent 20% , var(--white) 20.5% , var(--white) 20.8% , var(--green) 21.5%) ,
-
-    /* ceiling=== */
-
-
-    /* ===antenna */ 
-
-        radial-gradient( circle at center 100% , var(--black)  30% , transparent 0) ,
-
-    /* antenna=== */
-    
-    
-    /* ===antenna */ 
-
-        linear-gradient(var(--white) 100% , transparent 0) ,
-
-    /* antenna=== */
-
-
-    /* ===glass-l */ 
-
-        radial-gradient( 17.8em 37em at 70% 240% , var(--black) 30% , transparent 30.5%) ,
-
-    /* glass-l=== */
-
-
-    /* ===glass-r */ 
-
-        radial-gradient( 17.8em 37em at 31% 240% , var(--black) 30% , transparent 30.5%) ,
-
-    /* glass-r=== */
-
-
-    /* ===light */ 
-
-        radial-gradient( circle , var(--light) 48% ,  var(--black) 52%, var(--black) 59% , transparent 62%) ,
-
-    /* light=== */
-
-
-    /* ===light */ 
-
-        radial-gradient( circle , var(--light) 48% ,  var(--black) 52%, var(--black) 59% , transparent 62%) ,
-
-    /* light=== */
-
-
-    /* ===hood-ro */ 
-
-        radial-gradient( 1em 1em at 102% 100% ,   var(--m-gray)  28%, #f3f3f3 30% ) ,
-
-    /* hood-ro=== */
-
-
-    /* ===hood-ro */ 
-
-        radial-gradient( 1em 1em at 97% -7% ,  var(--m-gray)  28%, var(--l-gray)  30% ) ,
-
-    /* hood-ro=== */
-
-
-    /* ===hood-ro */ 
-
-        radial-gradient( 1em 1em at -6% 102% ,  var(--m-gray)  28%, #efefef 30% ) ,
-
-    /* hood-ro=== */
-
-
-    /* ===hood-ro */ 
-
-        radial-gradient( 1em 1em at -6% -1% ,  var(--m-gray)  28%, var(--l-gray)  30% ) ,
-
-    /* hood-ro=== */
-
-
-    /* ===hood-f */ 
-
-        linear-gradient( to top , var(--m-gray) 50% ,  var(--d-gray) 0, var(--d-gray) 58% , var(--m-gray) 0) ,
-
-    /* hood-f=== */
-
-
-    /* ===hood-e */ 
-
-        linear-gradient( to top , var(--l-gray) 30% , var(--white) 100% , transparent 0) ,
-
-    /* hood-e=== */
-
-
-    /* ===hood-l */ 
-
-        radial-gradient( 16.4em 30.1em at 209% 333% , var(--white)  30% , transparent 30.2%) ,
-
-    /* hood-l=== */
-
-
-    /* ===hood-r */ 
-
-        radial-gradient( 16.4em 30.1em at -109% 333% , var(--white) 30% , transparent 30.2%) ,
-
-    /* hood-r=== */
-
-
-    /* ===hood-o */ 
-
-        linear-gradient(  var(--gray) 100% , transparent 0) ,
-
-    /* hood-o=== */
-
-
-    /* ===hood */ 
-
-        linear-gradient( var(--white) 100% , transparent 0) ,
-
-    /* hood=== */
-
-
-    /* ===mirror */ 
-
-        radial-gradient( 6.7em 2.5em at 154% 8% , var(--black) 30% , transparent 33%) ,
-
-    /* mirror=== */
-
-
-    /* ===mirror */ 
-
-        radial-gradient( 6.7em 2.5em at -53% 8% , var(--black) 30% , transparent 33%) ,
-
-    /* mirror=== */
-
-
-    /* ===guide-l */ 
-
-        linear-gradient( var(--orange) 100% , transparent 0) ,
-
-    /* guide-l=== */
-
-
-    /* ===guide-r */ 
-
-        linear-gradient( var(--orange) 100% , transparent 0) ,
-
-    /* guide-r=== */
-
-
-    /* ===plaque */ 
-
-        linear-gradient( var(--yellow) 100% , transparent 0) ,
-
-    /* plaque=== */
-
-    
-    /* ===plaque */ 
-
-        linear-gradient( var(--l-yellow) 100% , transparent 0) ,
-
-    /* plaque=== */
-
-
-    /* ===bumper */ 
-
-        linear-gradient( var(--d-blue) 100% , transparent 0) ,
-
-    /* bumper=== */
-
-
-    /* ===bumper-l */ 
-
-        radial-gradient( circle at 124% 39% , var(--d-blue) 60% , transparent 64%) ,
-
-    /* bumper-l=== */
-
-
-    /* ===bumper-r */ 
-
-        radial-gradient( circle at -44% 39% , var(--d-blue) 60% , transparent 64%) ,
-
-    /* bumper-r=== */
-
-
-    /* ===bumper-d */ 
-
-        radial-gradient(13.2em 2em at 50% 59% , var(--l-gray) 96% , transparent 100% ) ,
-
-    /* bumper-d=== */
- 
- 
-    /* ===bumper-l */ 
- 
-        radial-gradient( 1.6em 1.6em at 75% -9% , var(--l-gray) 60% , transparent 64%) ,
-
-    /* bumper-l=== */
-
-
-    /* ===bumper-r */ 
- 
-        radial-gradient( 1.6em 1.6em at 15% -9% , var(--l-gray) 60% , transparent 64%) ,
-
-    /* bumper-r=== */
-
-
-    /* ===floor */ 
- 
-        linear-gradient( var(--d-blue) 100% , transparent 0) ,
-
-    /* floor=== */
-
-
-    /* ===floor-l */ 
-
-        radial-gradient( 6.9em 4.6em at 295% 3% , var(--d-blue) 30% , transparent 31%) ,
-
-    /* floor-l=== */
-
-
-    /* ===floor-r */ 
-
-        radial-gradient( 6.9em 4.6em at -189% 3% , var(--d-blue) 30% , transparent 31%) ;
-
-    /* floor-r=== */
-
-
-
-    background-size : 
-
-    /*=== ceiling */ 
-
-        61.5% 20% ,
-
-    /* ceiling=== */  
-
-
-    /* ===antenna */ 
-
-        5% 6% ,
-
-    /* antenna=== */
-
-
-    /*=== antenna */ 
-
-        .4% 39% ,
-
-    /* antenna=== */
-
-
-    /* ===glass-l */ 
-
-        60% 30% ,
-
-    /* glass-l=== */
-
-
-    /* ===glass-r */ 
-
-        60% 30% ,
-
-    /* glass-r=== */
-
-
-    /* ===light */ 
-
-        16% 16% ,
-
-    /* light=== */
-
-
-    /* ===light */ 
-
-        16% 16% ,
-
-    /* light=== */
-
-
-    /* ===hood-ro */ 
-
-        2.4% 2%  ,
-
-    /* hood-ro=== */
-
-
-    /* ===hood-ro */ 
-
-        2.4% 2.3% ,
-
-    /* hood-ro=== */
-
-
-    /* ===hood-ro */ 
-
-        2.4% 2.3% ,
-
-    /* hood-ro=== */
-
-
-    /* ===hood-ro */ 
-
-        2.4% 2.3% ,
-
-    /* hood-ro=== */
-
-
-    /* ===hood-f */ 
-
-        91% 12%  ,
-
-    /* hood-f=== */
-
-
-    /* ===hood-e */ 
-
-        93.9% 17% ,
-
-    /* hood-e=== */
-
-
-    /* ===hood-l */ 
-
-        12% 17.5% ,
-
-    /* hood-l=== */
-
-
-    /* ===hood-r */ 
-
-        12% 17.5% ,
-
-    /* hood-r=== */
-
-
-    /* ===hood-o */ 
-
-        38% 1.1% ,
-
-    /* hood-o=== */
-
-
-    /* ===hood */ 
-
-        77% 25% ,
-
-    /* hood=== */
-
-
-    /* ===mirror */ 
-
-        9% 30% ,
-
-    /* mirror=== */
-
-
-    /* ===mirror */ 
-
-        9% 30% ,
-
-    /* mirror=== */
-
-
-    /* ===guide-l */ 
-
-        8.4% 3% ,
-
-    /* guide-l=== */
-
-
-    /* ===guide-r */ 
-
-        8.4% 3% ,
-
-    /* guide-r=== */
-
-
-    /* ===plaque */ 
-
-        33% 6.5% ,
-
-    /* plaque=== */
-
-
-    /* ===plaque */ 
-
-        36% 9% ,
-
-    /* plaque=== */
-
-
-    /* ===bumper */ 
-
-        87% 30% ,
-
-    /* bumper=== */
-
-
-    /* ===bumper-l */ 
-
-        10% 12% ,
-
-    /* bumper-l=== */
-
-
-    /* ===bumper-r */ 
-
-        10% 12% ,
-
-    /* bumper-r=== */
-
-
-    /* ===bumper-d */ 
-
-        78% 35% ,
-
-    /* bumper-d=== */
-
-
-    /* ===bumper-l */ 
-
-        11% 8% ,
-
-    /* bumper-l=== */
-
-
-    /* ===bumper-r */ 
-
-        11% 8% ,
-
-    /* bumper-r=== */
-
-
-    /* ===floor */ 
-
-        68%  8% ,
-
-    /* floor=== */
-
-
-    /* ===floor-l */ 
-
-        5% 7% ,
-
-    /* floor-l=== */
-
-
-    /* ===floor-r */ 
-
-        5% 7% ;
-
-    /* floor-r=== */
-
-
-    background-position : 
-
-
-    /*=== ceiling */ 
-
-        50.5% 0 ,
-        
-    /* ceiling=== */ 
-
-
-    /* ===antenna */ 
-
-        90% 37% ,
-
-    /* antenna=== */
-
-
-    /*=== antenna */ 
-
-        88% 1.2% ,
-        
-    /* antenna=== */ 
-
-
-    /* ===glass-l */ 
-
-        0 11.7% ,
-
-    /* glass-l=== */
-
-
-    /* ===glass-r */ 
-
-        100% 11.7% ,
-
-    /* glass-r=== */   
-
-
-    /* ===light */ 
-
-        5% 63% ,
-
-    /* light=== */ 
-
-
-    /* ===light */ 
-
-        95% 63% ,
-
-    /* light=== */ 
-
-
-    /* ===hood-ro */ 
-
-        4.1% 55.7% ,
-
-    /* hood-ro=== */ 
-
-
-    /* ===hood-ro */ 
-
-        4.1% 65.9% ,
-
-    /* hood-ro=== */ 
-
-
-    /* ===hood-ro */ 
-
-        95.8% 55.7% ,
-
-    /* hood-ro=== */ 
-
-
-    /* ===hood-ro */ 
-
-        95.8% 65.8% ,
-
-    /* hood-ro=== */ 
-
-
-    /* ===hood-f */ 
-
-        center 62% ,
-
-    /* hood-f=== */ 
-
-
-    /* ===hood-e */ 
-
-        49% 63.6% ,
-
-    /* hood-e=== */
-
- 
-
-    /* ===hood-l */ 
-
-        3.4% 46.2% ,
-
-    /* hood-l=== */ 
-
-
-    /* ===hood-r */ 
-
-        96.5% 46.2% ,
-
-    /* hood-r=== */
-
-
-    /* ===hood-o */ 
-
-        center 40.9% ,
-
-    /* hood-o=== */
-
-
-    /* ===hood */ 
-
-        center 50.3% ,
-
-    /* hood=== */
-
-
-    /* ===mirror */ 
-
-        5.7% 48.6% ,
-
-    /* mirror=== */ 
-
-
-    /* ===mirror */ 
-
-        95% 48.6% ,
-
-    /* mirror=== */
-
-
-    /* ===guide-l */ 
-
-        5% 75.2% ,
-
-    /* guide-l=== */
-
-
-    /* ===guide-r */ 
-
-        95% 75.2% ,
-
-    /* guide-r=== */
-
-
-    /* ===plaque */ 
-
-        51% 86%  ,
-
-    /* plaque=== */
-
-
-    /* ===plaque */ 
-
-        51.5% 87.3%  ,
-
-    /* plaque=== */
-
-
-    /* ===bumper */ 
-
-        center 71.9% ,
-
-    /* bumper=== */
-
-
-    /* ===bumper-l */ 
-
-        -0.8% 77.8% ,
-
-    /* bumper-l=== */
-
-
-    /* ===bumper-r */ 
-
-        101.7% 77.8% ,
-
-    /* bumper-r=== */
-
-
-    /* ===bumper-d */ 
-
-        center 80.2% ,
-
-    /* bumper-d=== */
-
-
-    /* ===bumper-l */ 
-
-        4% 85.9% ,
-
-    /* bumper-l=== */
-
-
-    /* ===bumper-r */ 
-
-        97% 85.9% ,
-
-    /* bumper-r=== */
-
-
-    /* ===floor */ 
-
-        center 92.5% ,
-
-    /* floor=== */
-
-
-    /* ===floor-l */ 
-
-        11.7% 92.6% ,
-
-    /* floor-l=== */
-
-
-    /* ===floor-r */ 
-
-        88.3% 92.6% ;
-
-    /* floor-r=== */
-
-    
+@media (max-width: 770px) {
+    .background .ground {
+        height: 0vh;
+    }
 }
-
-
-@keyframes line{
-
-    100%{
-
-        background-position: center 100% ;
-
-    }
-
-} 
-
-
-@keyframes car{
-
-    15%, 23%{
-
-        transform: translate3d(-2.3em, 0, 0) ;
-
-    }
-
-    36% , 42%{
-
-        transform: translate3d(-.8em, 0, 0) ;
-
-    }
-
-    61%, 71.5%{
-
-        transform: translate3d(2.8em, 0, 0) ;
-
-    }
-
-    81%, 88%{
-
-        transform: translate3d(1.5em, 0, 0) ;
-    }
-
+.container {
+    position: relative;
+    margin: 0 auto;
+    width: 85%;
+    height: 100vh;
+    padding-bottom: 25vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 }
-
-@keyframes move-road {
-
-    5.5%{
-
-        transform: perspective(311px) rotateX(83deg) translate3d(var(--n-road) ,-11.975em, 0) ;
-
+@media (max-width: 770px) {
+    .container {
+        flex-direction: column;
+        padding-bottom: 0vh;
     }
-
-    27%, 51%{
-
-        transform: perspective(311px) rotateX(83deg) translate3d(var(--p-road) ,-11.975em, 0) ;
-
-    }
-
-    73%, 100% {
-
-        transform: perspective(311px) rotateX(83deg) translate3d(var(--n-road) ,-11.975em, 0) ;
-
-
-    }
-
 }
-
-@keyframes light{
-
-    0% , 37%{
-
-        --light: #fbfbfb ;
-    }
-
-    50%{
-
-        --light : #f1f1f1 ;
-    }
-    
-    62%{
-
-        --light : #fbfbfb ;
-    }
-
-    65%{
-
-        --light: #f1f1f1 ;
-
-    }
-
-    95%{
-
-        --light: #fbfbfb ;
-
-    }
-
-    100%{
-
-         --light: #f1f1f1 ;
-
-    }
-
+.left-section, .right-section {
+    position: relative;
 }
-
-@keyframes shake {
-
-    5%, 26%{
-
-        transform:  rotate(-1.5deg) ;
-
-    }
-
-    33%, 41%{
-
-        transform:  rotate(-.5deg) ;
-
-    }
-
-    48%, 69%{
-
-        transform: rotate(1.5deg) ;
-
-    }
-
-    80%, 95%{
-
-        transform:  rotate(.5deg) ;
-        
-    }
-
+.left-section {
+    width: 40%;
 }
-
-
-@media screen and (max-width: 36em) {
-    
-    html{
-
-        transform: scale(.5) ;
-
+@media (max-width: 770px) {
+    .left-section {
+        width: 100%;
+        height: 40%;
+        position: absolute;
+        top: 0;
     }
-
-
-    body::before{
-      
-        width: 11em ;
-        --n-road: -4em ;
-        --p-road: 4em ;
-      
-    }
-    
-
 }
-
-
+@media (max-width: 770px) {
+    .left-section .inner-content {
+        position: relative;
+        padding: 1rem 0;
+    }
+}
+.heading {
+    text-align: center;
+    font-size: 9em;
+    line-height: 1.3em;
+    margin: 2rem 0 0.5rem 0;
+    padding: 0;
+    text-shadow: 0 0 1rem #fefefe;
+}
+@media (max-width: 770px) {
+    .heading {
+        font-size: 7em;
+        line-height: 1.15;
+        margin: 0;
+    }
+}
+.subheading {
+    text-align: center;
+    max-width: 480px;
+    font-size: 1.5em;
+    line-height: 1.15em;
+    padding: 0 1rem;
+    margin: 0 auto;
+}
+@media (max-width: 770px) {
+    .subheading {
+        font-size: 1.3em;
+        line-height: 1.15;
+        max-width: 100%;
+    }
+}
+.right-section {
+    width: 50%;
+}
+@media (max-width: 770px) {
+    .right-section {
+        width: 100%;
+        height: 60%;
+        position: absolute;
+        bottom: 0;
+    }
+}
+.svgimg {
+    position: absolute;
+    bottom: 0;
+    padding-top: 10vh;
+    padding-left: 1vh;
+    max-width: 100%;
+    max-height: 100%;
+}
+@media (max-width: 770px) {
+    .svgimg {
+        padding: 0;
+    }
+}
+.svgimg .bench-legs {
+    fill: #0C0E10;
+}
+.svgimg .top-bench, .svgimg .bottom-bench {
+    stroke: #0C0E10;
+    stroke-width: 1px;
+    fill: #5B3E2B;
+}
+.svgimg .bottom-bench path:nth-child(1) {
+    fill: #432d20;
+}
+.svgimg .lamp-details {
+    fill: #202425;
+}
+.svgimg .lamp-accent {
+    fill: #2c3133;
+}
+.svgimg .lamp-bottom {
+    fill: linear-gradient(#202425, #0C0E10);
+}
+.svgimg .lamp-light {
+    fill: #EFEFEF;
+}
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 1rem #fefefe;
+    }
+    50% {
+        text-shadow: 0 0 1.85rem #ededed;
+    }
+    100% {
+        text-shadow: 0 0 1rem #fefefe;
+    }
+}
 
   </style>
 </head>
 
 <body>
-  <div class="nav">
+    <div class="background">
+        <div class="ground"></div>
+    </div>
     <div class="container">
-      <div class="row">
-        <div class="four columns u-pull-left">
-          <div class="logo">
-            <h1>
-              <a href="">
-                <span class="web">Web</span><span class="devs">Devs</span>
-              </a>
-            </h1>
-          </div>
+        <div class="left-section">
+            <div class="inner-content">
+                <h1 class="heading">404</h1>
+                <p class="subheading">Looks like the page you were looking for is no longer here. <a href="/">Return to Home?</a></p>
+            </div>
         </div>
-        <div class="eight columns u-pull-right">
-          <ul class="nav-2">
-            <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">About us</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">Comments</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">Services</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">Projects</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
-          </ul>
+        <div class="right-section">
+            <svg class="svgimg" xmlns="http://www.w3.org/2000/svg" viewBox="51.5 -15.288 385 505.565">
+            <g class="bench-legs">
+              <path d="M202.778,391.666h11.111v98.611h-11.111V391.666z M370.833,390.277h11.111v100h-11.111V390.277z M183.333,456.944h11.111
+              v33.333h-11.111V456.944z M393.056,456.944h11.111v33.333h-11.111V456.944z" />
+            </g>
+            <g class="top-bench">
+              <path d="M396.527,397.917c0,1.534-1.243,2.777-2.777,2.777H190.972c-1.534,0-2.778-1.243-2.778-2.777v-8.333
+              c0-1.535,1.244-2.778,2.778-2.778H393.75c1.534,0,2.777,1.243,2.777,2.778V397.917z M400.694,414.583
+              c0,1.534-1.243,2.778-2.777,2.778H188.194c-1.534,0-2.778-1.244-2.778-2.778v-8.333c0-1.534,1.244-2.777,2.778-2.777h209.723
+              c1.534,0,2.777,1.243,2.777,2.777V414.583z M403.473,431.25c0,1.534-1.244,2.777-2.778,2.777H184.028
+              c-1.534,0-2.778-1.243-2.778-2.777v-8.333c0-1.534,1.244-2.778,2.778-2.778h216.667c1.534,0,2.778,1.244,2.778,2.778V431.25z"
+              />
+            </g>
+            <g class="bottom-bench">
+              <path d="M417.361,459.027c0,0.769-1.244,1.39-2.778,1.39H170.139c-1.533,0-2.777-0.621-2.777-1.39v-4.86
+              c0-0.769,1.244-0.694,2.777-0.694h244.444c1.534,0,2.778-0.074,2.778,0.694V459.027z" />
+              <path d="M185.417,443.75H400c0,0,18.143,9.721,17.361,10.417l-250-0.696C167.303,451.65,185.417,443.75,185.417,443.75z" />
+            </g>
+            <g id="lamp">
+              <path class="lamp-details" d="M125.694,421.997c0,1.257-0.73,3.697-1.633,3.697H113.44c-0.903,0-1.633-2.44-1.633-3.697V84.917
+              c0-1.257,0.73-2.278,1.633-2.278h10.621c0.903,0,1.633,1.02,1.633,2.278V421.997z"
+              />
+              <path class="lamp-accent" d="M128.472,93.75c0,1.534-1.244,2.778-2.778,2.778h-13.889c-1.534,0-2.778-1.244-2.778-2.778V79.861
+              c0-1.534,1.244-2.778,2.778-2.778h13.889c1.534,0,2.778,1.244,2.778,2.778V93.75z" />
+              
+              <circle class="lamp-light" cx="119.676" cy="44.22" r="40.51" />
+              <path class="lamp-details" d="M149.306,71.528c0,3.242-13.37,13.889-29.861,13.889S89.583,75.232,89.583,71.528c0-4.166,13.369-13.889,29.861-13.889
+              S149.306,67.362,149.306,71.528z"/>
+              <radialGradient class="light-gradient" id="SVGID_1_" cx="119.676" cy="44.22" r="65" gradientUnits="userSpaceOnUse">
+                <stop  offset="0%" style="stop-color:#FFFFFF; stop-opacity: 1"/>
+                <stop  offset="50%" style="stop-color:#EDEDED; stop-opacity: 0.5">
+                  <animate attributeName="stop-opacity" values="0.0; 0.5; 0.0" dur="5000ms" repeatCount="indefinite"></animate>
+                </stop>
+                <stop  offset="100%" style="stop-color:#EDEDED; stop-opacity: 0"/>
+              </radialGradient>
+              <circle class="lamp-light__glow" fill="url(#SVGID_1_)" cx="119.676" cy="44.22" r="65"/>
+              <path class="lamp-bottom" d="M135.417,487.781c0,1.378-1.244,2.496-2.778,2.496H106.25c-1.534,0-2.778-1.118-2.778-2.496v-74.869
+              c0-1.378,1.244-2.495,2.778-2.495h26.389c1.534,0,2.778,1.117,2.778,2.495V487.781z" />
+            </g>
+          </svg>
         </div>
-        <div class="u-cf"></div>
-      </div>
     </div>
 </body>
 
 </html>
-<!-- IE needs 512+ bytes: https://docs.microsoft.com/archive/blogs/ieinternals/friendly-http-error-pages -->
+

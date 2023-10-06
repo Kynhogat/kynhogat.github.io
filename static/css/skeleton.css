@@ -9,7 +9,7 @@
   }
   
   section {
-  height:100vh;
+  /* height:100vh; */
   z-index:-10
   }
   
@@ -252,7 +252,8 @@
   
   a {
   position:relative;
-  text-decoration:none
+  text-decoration:none;
+  color: white;
   }
   
   .button,button,input[type="submit"],input[type="reset"],input[type="button"] {
