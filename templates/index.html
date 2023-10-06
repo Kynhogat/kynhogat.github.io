@@ -31,34 +31,23 @@
 <body>
 
   <section class="hero">
-    <div class="nav">
-      <div class="container">
-        <div class="row">
-          <div class="four columns u-pull-left">
-            <div class="logo">
-              <h1>
-                <a href="">
-                  <span class="web">Web</span><span class="devs">Devs</span>
-                </a>
-              </h1>
-            </div>
+    <input type="checkbox" id="active">
+      <label for="active" class="menu-btn"><i class="fa fa-bars"></i></label>
+      <div class="wrapper">
+         <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Gallery</a></li>
+            <li><a href="#">Feedback</a></li>
+         </ul>
+      </div>
+
+              <div class="u-cf"></div>
           </div>
-          <div class="eight columns u-pull-right">
-            <ul class="nav-2">
-              <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
-              <li class="nav-item"><a href="#" class="nav-link">About us</a></li>
-              <li class="nav-item"><a href="#" class="nav-link">Comments</a></li>
-              <li class="nav-item"><a href="#" class="nav-link">Services</a></li>
-              <li class="nav-item"><a href="#" class="nav-link">Projects</a></li>
-              <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
-            </ul>
-          </div>
-          <div class="u-cf"></div>
-        </div>
       </div>
       <!-- Hero section -->
-  
-    </div>
+  </div>
     <video autoplay muted loop id="vid-background">
       <source src="../static/img/background.mp4" type="video/mp4" />
     </video>
@@ -155,47 +144,65 @@
   <!-- Comments -->
 
   <!-- Social icons & Footer -->
-<footer class="footer">
-  <div class="container">
-    <div class="row">
-      <div class="twelve columns">
-        <div class="four columns">
-          <div class="logo u-pull-left"></div>
+  <footer>
+    <div class="content">
+      <div class="top">
+        <div class="logo-details">
+          <i class="fa fa-slack"></i>
+          <span class="logo_name">WebDevs</span>
         </div>
-        <div class="six columns">
-          <div class="two columns">
-            <p>main</p>
-            <li>Lorem.</li>
-            <li>Lorem.</li>
-            <li>Lorem.</li>
-            <li>Lorem.</li>
-          </div>
-          <div class="two columns">
-            <p>main</p>
-            <li>Lorem.</li>
-            <li>Lorem.</li>
-            <li>Lorem.</li>
-            <li>Lorem.</li>
-          </div>
-          <div class="two columns">
-            <p>main</p>
-            <li>Lorem.</li>
-            <li>Lorem.</li>
-            <li>Lorem.</li>
-            <li>Lorem.</li>
-          </div>
-        </div>
-        <div class="two columns">
-          <ul class="social-icons">
-            <li class="fa fa-twitter"></li>
-            <li class="fa fa-facebook"></li>
-            <li class="fa fa-instagram"></li>
-          </ul>
+        <div class="media-icons">
+          <a href="#"><i class="fa fa-facebook-f"></i></a>
+          <a href="#"><i class="fa fa-twitter"></i></a>
+          <a href="#"><i class="fa fa-instagram"></i></a>
+          <a href="#"><i class="fa fa-linkedin"></i></a>
+          <a href="#"><i class="fa fa-youtube"></i></a>
         </div>
       </div>
+      <div class="link-boxes">
+        <ul class="box">
+          <li class="link_name">Company</li>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Contact us</a></li>
+          <li><a href="#">About us</a></li>
+          <li><a href="#">Get started</a></li>
+        </ul>
+        <ul class="box">
+          <li class="link_name">Services</li>
+          <li><a href="#">App design</a></li>
+          <li><a href="#">Web design</a></li>
+          <li><a href="#">Logo design</a></li>
+          <li><a href="#">Banner design</a></li>
+        </ul>
+        <ul class="box">
+          <li class="link_name">Account</li>
+          <li><a href="#">Profile</a></li>
+          <li><a href="#">My account</a></li>
+          <li><a href="#">Prefrences</a></li>
+          <li><a href="#">Purchase</a></li>
+        </ul>
+        <ul class="box">
+          <li class="link_name">Courses</li>
+          <li><a href="#">HTML & CSS</a></li>
+          <li><a href="#">JavaScript</a></li>
+          <li><a href="#">Photography</a></li>
+          <li><a href="#">Photoshop</a></li>
+        </ul>
+        <ul class="box input-box">
+          <li class="link_name">Subscribe</li>
+          <li><input type="text" placeholder="Enter your email"></li>
+          <li><input type="button" value="Subscribe"></li>
+        </ul>
+      </div>
     </div>
-  </div>
-</footer>
+    <div class="bottom-details">
+      <div class="bottom_text">
+        <span class="copyright_text">Copyright © 2023 <a href="#">WebDevs</a>All rights reserved</span>
+
+      </div>
+    </div>
+  </footer>
+
   <!-- Scroll to top button -->
 
   <script src="js/app.js"></script>
