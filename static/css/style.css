@@ -34,7 +34,7 @@ transition:var(--transition)
   clip-path: circle(75%);
 }
 .menu-btn{
-  position: absolute;
+  position: fixed;
   z-index: 1001;
   right: 20px;
   /* left: 20px; */
