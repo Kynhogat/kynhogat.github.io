@@ -1,12 +1,11 @@
 :root {
-  --black-color:#111010;
-  --transition:.4s ease-in;
-  --background-color:#f4f4f4;
-  --text-color:#333;
-  --link-color:#007BFF;
-  --button-bg-color:#33C3F0;
-  --table-header-bg-color:#f0f0f0;
-  --gradient-primary:linear-gradient(to bottom,var(--primary-color),var(--link-color))
+  --blue0:#021024;
+  --blue1:#052659;
+  --blue2:#5483B3;
+  --blue3:#7DA0CA;
+  --blue4:#C1E8FF;
+  --black-color:#000;
+  --transition:.4s ease-in
   }
   
   section {
