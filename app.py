@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, jsonify
+from flask import Flask, render_template, request, jsonify, redirect
 
 app = Flask(__name__)
 
@@ -14,7 +14,7 @@ def sample():
 # Define a route for a sample page
 @app.route('/docs')
 def docs():
-    return render_template('docs.html')
+    return redirect('https://khaleds-organization-1.gitbook.io/untitled/')
 
 @app.route('/api/data', methods=['POST'])
 def get_data():
